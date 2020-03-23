@@ -2,7 +2,7 @@ const http = require('http');
 
 const hostname = 'localhost';
 const port = 3000;
-const { exec } = require('child_process');
+const exec = require('child_process').exec;
 
 const server = http.createServer((req, res) => {
 	var runScript;
