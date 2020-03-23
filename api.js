@@ -1,3 +1,4 @@
+'use strict';
 const http = require('http');
 
 const hostname = 'localhost';
@@ -20,6 +21,7 @@ const server = http.createServer((req, res) => {
 			            scriptResult = stdout;
 			            console.log(stderr);
 			            if (error !== null) {
+			            	scriptResult = "error";
 			                console.log(`exec error: get balance`);
 			            }
 			        });	
